@@ -1,5 +1,7 @@
 This serves as a demo repository to show that async Vue.js components leave behind timeouts for _timeout_ and _delay_ that will fire late after the original component has been rendered.
 
+Run time demo here: https://ahus1.github.io/vue-async-timeout/
+
 In a web browser this might not be a severe problem, but when using server side rendering/generating, these will stack up.
 When generating pages, the node process will be blocked until the timeouts have completed AFAIK.
 
