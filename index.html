@@ -3,12 +3,17 @@
 <script src="vue.js"></script>
 Async example
 <div id="app">
+    Expected: 3 timeouts set, 1 triggered, 2 cleared.<br>
+    Please wait for 3 seconds for this to complete.
     <ul>
         <li>Timeouts Set: {{ timeoutsSet }}</li>
         <li>Timeouts Triggered: {{ timeoutsTriggered }}</li>
         <li>Timeouts Cleared: {{ timeoutsCleared }}</li>
     </ul>
     <my-async></my-async>
+    <p>
+        Read more about this issue here: <a href="https://github.com/ahus1/vue-async-timeout">https://github.com/ahus1/vue-async-timeout</a>
+    </p>
 </div>
 <script src="main.js"></script>
 </body>
