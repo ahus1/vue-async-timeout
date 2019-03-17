@@ -35,13 +35,12 @@ new Vue({
             return v
         };
 
-        const oldClearTimeout = window.clearTimeout();
+        const oldClearTimeout = window.clearTimeout;
 
         window.clearTimeout = function(id) {
             oldClearTimeout(id);
-            console.log("timeout cleared: ", v)
+            console.log("timeout cleared: ", id)
             ++ data.timeoutsCleared;
-            return v
         };
 
         return data
