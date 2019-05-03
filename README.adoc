@@ -1,23 +1,19 @@
-This serves as a demo repository to show that async Vue.js components leave behind timeouts for _timeout_ and _delay_ that will fire late after the original component has been rendered.
+= Vue.js Async Components
+
+== About
+
+This used to be a proof-of-existence for a Vue.js issue. This serves as a demo how Vue.js async components work.
+
+== How to use it
 
 Run time demo here: https://ahus1.github.io/vue-async-timeout/
 
-In a web browser this might not be a severe problem, but when using server side rendering/generating, these will stack up.
-When generating pages, the node process will be blocked until the timeouts have completed AFAIK.
+I encourage you to play around with it locally, change the timeout values in main.js and see how async components work in Vue.js.
 
-When generating pages for Nuxt, this leads to a warning message like this:
+== Historic information
 
------
-The command 'nuxt generate' finished but did not exit after 5s
-This is most likely not caused by a bug in Nuxt.js
-Make sure to cleanup all timers and listeners you or your plugins/modules start.
-Nuxt.js will now force exit
-
-DeprecationWarning: Starting with Nuxt version 3 this will be a fatal error
------
-
-A PR is available here: https://github.com/vuejs/vue/pull/9649
+A PR is available here that fixed the original issue: https://github.com/vuejs/vue/pull/9649
 
 The source of this demo is available here: https://github.com/ahus1/vue-async-timeout
 
-A demo how this affects Nuxt is available here: https://github.com/ahus1/nuxt-async-timeout
+A demo how this affected Nuxt is available here: https://github.com/ahus1/nuxt-async-timeout
